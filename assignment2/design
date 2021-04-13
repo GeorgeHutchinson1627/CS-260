@@ -6,9 +6,25 @@ A way to add an item to the back of the queue.
 A way to add an item to the beginning of the queue.
 A way to pop an item from the end of the queue.
 A way to see what is at the front and back of the queue.
+A way to check if the queue is empty
 
 Values we might need to know for a queue could be:
 
 The length of the queue
 How many values are currently in the queue
+The value of the pointer of the beginning of the queue
+
+For a list data structure these functions will probably be useful:
+
+A way to insert an item anywhere in the list
+A way to remove an item anywhere in the list
+A way to check if there are no items in the list
+
+Values that will be important:
+
+The value of the item we are trying to add or remove.
+The length of the list
+The position of the item we are trying to insert/remove
+
+
 
