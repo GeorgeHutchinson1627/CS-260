@@ -1,3 +1,10 @@
-1. Some what we could represent a marble could the marbles could be represented as an integer and the bag could be an array
-2. We could add them by putting them ontop of a stack an array
-3. We could remove
+1. Some what we could represent a marble could the marbles could be represented a an integer that in inscribed into the marble, and the bag could be an vector
+
+2. We could add them by pushing a bunch of integers using the vector pushback function.
+3.To remove marbles the vector erase function could be used to get rid of individual marbles.
+
+4. Tests I will do are to remove all of the marbles from the vector and even try to remove more marbles than are in the bag.
+   I will then add the marbles back and remove 1 marble in particular.
+  
+  
+  
