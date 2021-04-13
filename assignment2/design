@@ -1,3 +1,14 @@
 
+For a queue data structure we will likely need to following functions:
 
+A way to check if the queue has looped all the way around
+A way to add an item to the back of the queue.
+A way to add an item to the beginning of the queue.
+A way to pop an item from the end of the queue.
+A way to see what is at the front and back of the queue.
+
+Values we might need to know for a queue could be:
+
+The length of the queue
+How many values are currently in the queue
 
