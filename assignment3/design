@@ -1,6 +1,7 @@
 
-Queue data type will need atleast 3 methods:
+Queue data type will need atleast 4 things:
 
+a struct to represent a node
 enqueue-allows data to be put at the back of the queue
 dequeue-removes and returns data at the front
 peek-prints the data at the front
