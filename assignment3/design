@@ -1,1 +1,17 @@
 
+Queue data type will need atleast 3 methods:
+
+enqueue-allows data to be put at the back of the queue
+dequeue-removes and returns data at the front
+peek-prints the data at the front
+
+values we need to know/have:
+
+
+a value for a data node
+a pointer for the next node
+
+a pointer for the front
+a pointer for the back
+a pointer for the newest added data node
+
