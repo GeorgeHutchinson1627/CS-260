@@ -10,7 +10,6 @@ using namespace std;
 
 
 
-
 struct node{
     int data;
     node *next_node;
@@ -18,6 +17,9 @@ struct node{
 node *front=nullptr;
 node *back=nullptr;
 
+
+
+//adds node to end of queue
 void enqueue(int value)
 {
     node *new_node= new node();
@@ -37,6 +39,8 @@ void enqueue(int value)
     }
 }
 
+
+//removes and returns node at the beginning
 int dequeue(){
     int removed_data;
     node* new_node= front;
@@ -45,7 +49,7 @@ int dequeue(){
     return removed_data;
 }
 
-
+//peeks at front node
 void peek(){
     int front_value;
     front_value=front->data;
