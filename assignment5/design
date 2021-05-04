@@ -1,0 +1,12 @@
+
+For a linked listed sorting and searching we will need atleast two functions:
+
+add_sorted()
+
+search()
+
+For the add sorted we will need to know the values of each node added so that we can place it from lowest to highest
+
+we can do this by checking the value of a node and see if it is higher or lower than the node we want to insert
+
+for searching in a linked list we will need to implement a search with that linked list that goes through the list and checks the values.
