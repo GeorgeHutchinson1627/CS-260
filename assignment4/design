@@ -1,1 +1,14 @@
 
+
+Needed functions: add remove look
+
+possible values/varibles:
+
+position new node will be added
+data of new node
+a pointer for the beginning of the linked list
+a pointer for the newly added node
+
+pointer for node of wanted position-1
+
+will need to iterate over linked list with a for/while loop
