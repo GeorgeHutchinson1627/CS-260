@@ -1,1 +1,87 @@
 
+#include <iostream>
+
+using namespace std;
+
+
+struct node{
+    int data;
+    node *next_node;
+};
+
+node *beginning=nullptr;
+int linked_length=1;
+void add_value(node* header,int value)
+{
+  node *pointer=beginning;
+  node *new_node= new node();
+  new_node->data=value;
+  new_node->next_node=nullptr;
+  bool placed=false;
+
+  if (beginning==nullptr){
+      beginning=header;
+  }
+  if (new_node->data<beginning->data){
+    new_node->next_node=beginning;
+    beginning=new_node;
+  }
+  else if (new_node->data>=beginning->data){
+          while (placed==false){
+              if (new_node->data<=pointer->data){
+                  new_node->next_node=pointer->next_node;
+                  pointer->next_node=new_node;
+                  placed=true;
+              }
+              else if (pointer->next_node==nullptr){
+                  new_node->next_node=pointer->next_node;
+                  pointer->next_node=new_node;
+                  placed=true;
+              }
+              else{
+                 pointer=pointer->next_node;
+                } 
+          
+          }
+      }
+    linked_length++;   
+  }
+
+
+
+node *middle;
+node*end;
+void find(){
+    
+    int length=linked_length;
+    bool not_found=true;
+    
+    
+    while (not_found){
+
+    }
+
+}
+
+void show(){
+    node *pointer=beginning;
+    while (pointer!=nullptr){
+        cout<<pointer->data<<"\n";
+        pointer=pointer->next_node;
+    }
+     
+
+}
+
+
+int main(){
+    node *header=new node();
+    header->data=10;
+    header->next_node=NULL;
+    add_value(header,9);
+    add_value(header,8);
+    add_value(header,12);
+    add_value(header,4);
+    show();
+    find();   
+}
