@@ -1,0 +1,13 @@
+#Tests
+
+Check left node of the left left node to make sure nodes are added properly
+
+Check leftmost/rightmost node to make sure when a node was removed the tree has remained intact
+
+#Functions
+
+Going to need add function and remove function
+
+#Things we may need to know/have
+pointer to left/right node in tree
+way to go through tree
