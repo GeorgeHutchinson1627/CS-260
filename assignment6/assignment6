@@ -1,1 +1,94 @@
 
+#include <iostream>
+
+using namespace std;
+
+
+struct node{
+    int data;
+    node *left;
+    node *right;
+};
+
+void add(node *root,int value){
+  node *pointer=root;
+  node *new_node= new node();
+  new_node->data=value;
+  new_node->left=nullptr;
+  new_node->right=nullptr;
+  bool placed=false;
+
+while (placed==false){
+  if (new_node->data<=pointer->data){
+      if (pointer->left==nullptr){
+          pointer->left=new_node;
+          placed=true;
+  }
+    else{
+        pointer=pointer->left;
+
+    }
+  }
+  else if(new_node->data>pointer->data){
+    if (pointer->right==nullptr){
+      pointer->right=new_node;
+      placed=true;
+    }
+    else{
+      pointer=pointer->right;
+    }
+
+  }
+}
+
+};
+
+node* find(node *root, int number){
+  node* pointer=root;
+  node* pointer_trail=root;
+  bool found=false;
+
+  while (pointer!=nullptr&&found==false){
+    if (number<pointer->data){
+      pointer=pointer->left;
+    }
+    else if (number==pointer->data){
+      found=true;
+      cout<<"Found "<<number<<"\n";
+    }
+    else{
+      pointer=pointer->right;
+    }
+    pointer_trail=pointer;
+  }
+
+  if (found==true){
+    return pointer;
+  }
+  else{
+    return root;
+  }
+}
+
+void remove(node *root, int number){
+  node *found_node=find(root,number);
+}
+
+
+int main(){
+    node *root=new node();
+    root->data=10;
+    root->left=nullptr;
+    root->right=nullptr;
+
+    add(root,10);
+    add(root,9);
+    add(root,11);
+    add(root,11);
+    add(root,12);
+    cout<<root->left->left->data;
+    cout<<root->right->data;
+    cout<<root->right->left->data;
+
+    find(root,8);
+}
