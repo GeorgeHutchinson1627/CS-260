@@ -8,6 +8,11 @@ Check leftmost/rightmost node to make sure when a node was removed the tree has 
 
 Going to need add function and remove function
 
+remove function will first find node by checking values and going to the left if the value is less or equal to current node and right if greater.
+
+Successor will be chosen by first checking if there is a right subtree on the found node and if not, head to the very bottom of the left subtree.
+if there is a right subtree head to leftmost node in the right subtree.
+
 #Things we may need to know/have
 pointer to left/right node in tree
 way to go through tree
