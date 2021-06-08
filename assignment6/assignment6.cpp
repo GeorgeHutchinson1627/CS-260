@@ -3,12 +3,16 @@
 using namespace std;
 
 
+//I did some reaserch on recusion to get the tree traversal working
+//link to site https://www.tutorialspoint.com/data_structures_algorithms/tree_traversal.htm
+
 struct node{
     int data;
     node *left;
     node *right;
 };
 
+//Adds node to binary tree with inputed value
 void add(node *root,int value){
   node *pointer=root;
   node *new_node= new node();
@@ -42,7 +46,8 @@ while (placed==false){
 
 };
 
-node* find(node *root, int number){
+//Finds successor in an inorder manner and removes node with inputed value 
+node* remove(node *root, int number){
   node* pointer=root;
   node*pointer_trail=root;
   bool found=false;
@@ -56,7 +61,7 @@ node* find(node *root, int number){
       pointer_trail=pointer; 
       pointer=pointer->right;
     }
-    
+    //node is found
     else if (number==pointer->data){
       found=true;
       cout<<"Found and replaced "<<number<<"\n";
@@ -76,7 +81,6 @@ node* find(node *root, int number){
         }
         successor->left=pointer->left;
         successor->right=pointer->right;
-    
         return successor;
 
       }
@@ -103,18 +107,25 @@ node* find(node *root, int number){
     return root;
   }
 }
+//traverses tree using the inorder recusive meathod 
+node * inorder_tranverse(node*root){
+  node* pointer=root;
+  if (pointer==nullptr) return pointer;
+  inorder_tranverse(pointer->left);
+  cout<<pointer->data<<"\n";
+  inorder_tranverse(pointer->right); 
 
-void remove(node *root, int number){
-  node *found_node=find(root,number);
 }
 
-
+//main
 int main(){
     node *root=new node();
     root->data=10;
     root->left=nullptr;
     root->right=nullptr;
 
+
+    
     add(root,9);
     add(root,10);
     cout<<root->left->right->data<<"\n";
@@ -122,6 +133,8 @@ int main(){
     add(root,11);
     add(root,18);
     add(root,16);
-    find(root,15);
+    inorder_tranverse(root);
+    remove(root,15);
     cout<<root->right->right->data;
+    
 }
