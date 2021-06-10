@@ -9,6 +9,7 @@ struct node{
     node*second_node;
     int weight=9999;
     int second_weight=9999;
+    node*parent;
 };
 
 //creats the vertices of the graph
@@ -53,13 +54,16 @@ void MST(node**graph,int number_nodes){
     }
 }
 
-
-void shortest_path(){
-
+//simple shortest path function
+void shortest_path(int start,int finish,node** graph){
+    node**array_pointer=graph;
+    
+    
 }
 
 int main(){
- //In terms of complexity I belive my vertex and edge adding function is only doing O(1) while I believe that my MST is O(N)
+    //In terms of complexity I belive my vertex and edge adding function is only doing O(1) while I believe that my MST is O(N)
+    //The shortest path is also probably O(n).
     node** graph=graph_maxtrix(6);
     add_edge(0,2,2,graph);
     add_edge(0,3,5,graph);
