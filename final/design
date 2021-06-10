@@ -1,1 +1,15 @@
 
+#Tests for code that it needs to pass. 
+
+vertex's are actually added
+connections between vertex's are added and can be weighted
+It finds correct minimum spanning tree
+It finds correct minimum distance
+
+#Functions
+
+Add vertex function
+add edge function
+minimum spanning tree
+shortest path
+been visisted function?
