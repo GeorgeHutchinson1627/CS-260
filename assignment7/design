@@ -4,4 +4,5 @@ Make sure numeric value of hash matches the inputed string after it is hashed
 Make sure string is acessible with by outputting to console
 Make sure if collision occurs, that first input is replaced
 
-# I plan on making the hash function simply take the ascii value of the character
+# I plan on making the hash function simply take the ascii value of the character and then 
+taking the remainder of the ascii values divided by the number of storage spots in my array
