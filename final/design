@@ -1,4 +1,6 @@
 
+#I plan on implementing a rather simple graph where a node can only have two adjecent nodes at maximum.
+
 #Tests for code that it needs to pass. 
 
 vertex's are actually added
@@ -8,7 +10,7 @@ It finds correct minimum distance
 
 #Functions
 
-Add vertex function
+created specified numbers of vertex's function
 add edge function
 minimum spanning tree
 shortest path
@@ -17,7 +19,7 @@ been visisted function?
 #use adjecency matrix probably with vector.
 
 
-form queue of visited nodes for minimum spanning tree
-use dijktras algorytm for shortest path
+iterate through node * array for MST 
+do the same for shortest path
 
 
