@@ -59,6 +59,7 @@ void shortest_path(){
 }
 
 int main(){
+ //In terms of complexity I belive my vertex and edge adding function is only doing O(1) while I believe that my MST is O(N)
     node** graph=graph_maxtrix(6);
     add_edge(0,2,2,graph);
     add_edge(0,3,5,graph);
