@@ -13,3 +13,11 @@ add edge function
 minimum spanning tree
 shortest path
 been visisted function?
+
+#use adjecency matrix probably with vector.
+
+
+form queue of visited nodes for minimum spanning tree
+use dijktras algorytm for shortest path
+
+
