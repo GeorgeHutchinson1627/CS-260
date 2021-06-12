@@ -1,5 +1,5 @@
 
-#I plan on implementing a rather simple graph where a node can only have two adjecent nodes at maximum.
+#Design updated so nodes can have more and two adjecents
 
 #Tests for code that it needs to pass. 
 
@@ -16,7 +16,7 @@ minimum spanning tree
 shortest path
 been visisted function?
 
-#use adjecency matrix probably with vector.
+#use two vectors, one for weights of edges one for adjecent nodes.
 
 
 iterate through node * array for MST 
