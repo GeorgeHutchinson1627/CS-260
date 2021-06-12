@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -43,6 +42,7 @@ void MST(node**graph,int number_nodes){
      for(int i=0;i<number_nodes;i++){
         min = *min_element(graph[current_number]->weights.begin(), graph[current_number]->weights.end());
          for(int j=0;j<graph[current_number]->adjecents.size();j++){
+             //looks to see if adjecent node is in the visited vector and its edge weight is equal to the minimum value 
              if (find(visited.begin(), visited.end(), graph[current_number]->adjecents[j]->data) != visited.end()==false and 
              (graph[current_number]->weights[j]==min)){
                  visited.push_back(current_number);
@@ -61,9 +61,13 @@ void MST(node**graph,int number_nodes){
 void shortest_path(int start,int finish,node** graph){
     vector<node*> queue;
     node* current_adjecent;
-    graph[0]->value=0;
+    //sets starting nodes_distance to itself to be 0
+    graph[start]->value=0;
+    
     queue.push_back(graph[start]);
+    //sets starting nodes parent to be itself
     graph[start]->parent=graph[start];
+    //checks if queue is empty
     while(queue.empty()==false){
         for(int j=0;j<queue[0]->adjecents.size();j++){
             current_adjecent=queue[0]->adjecents[j];
@@ -79,6 +83,7 @@ void shortest_path(int start,int finish,node** graph){
         }
     node* current_node=graph[finish];
     vector<node*>queue2;
+    //second queue so results can be printed
     queue2.push_back(graph[finish]);
     cout<<"Shortest path"<<"\n";
     while (current_node->parent!=current_node){
